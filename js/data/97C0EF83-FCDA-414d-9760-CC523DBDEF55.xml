@@ -1,0 +1,9 @@
+tocTab[tocTab.length] = new Array("0.1.1.1.5:1", "", "Modelo de proceso BMM - Orden de ejecución iterativo", "EARoot/EA1/EA1/EA1/EA5/EA48.htm", "189.png", "4", "0", "", "Analysis diagram0","{3B2BBE48-19FB-4443-84BF-E2B2F5532F88}");
+tocTab[tocTab.length] = new Array("0.1.1.1.5:2", "", "", "EARoot/EA1/EA1/EA1/EA5/EA51.htm", "60.png", "E72", "0", "", "Collaboration0","{D79A129A-DBA3-44d4-93C1-84EB6BEE2AE6}");
+tocTab[tocTab.length] = new Array("0.1.1.1.5:3", "", "Fin", "EARoot/EA1/EA1/EA1/EA5/EA53.htm", "69.png", "E73", "0", "", "StateNode0","{34FEA96B-197D-449c-BC17-44FFF58B5640}");
+tocTab[tocTab.length] = new Array("0.1.1.1.5:4", "", "Inicio", "EARoot/EA1/EA1/EA1/EA5/EA54.htm", "68.png", "E71", "0", "", "StateNode0","{0E69354E-EA3C-49c0-AB30-2DD175450CC6}");
+tocTab[tocTab.length] = new Array("0.1.1.1.5:5", "", "«process» Modelado de eventos (diagramas de flujo de trabajo)", "EARoot/EA1/EA1/EA1/EA5/EA55.htm", "21.png", "E87", "0", "", "Activity0","{1768789A-208A-4951-8319-3BDCD18A6235}");
+tocTab[tocTab.length] = new Array("0.1.1.1.5:6", "", "«process» Modelado de Objetos del Negocio", "EARoot/EA1/EA1/EA1/EA5/EA56.htm", "21.png", "E88", "0", "", "Activity0","{B693C0BF-71A7-4d3e-8EA9-20F4F5CDE5EF}");
+tocTab[tocTab.length] = new Array("0.1.1.1.5:7", "", "«process» Modelado de Procesos del Negocio", "EARoot/EA1/EA1/EA1/EA5/EA57.htm", "21.png", "E89", "0", "", "Activity0","{484447F4-594B-4cc7-82B0-9927954E3BB9}");
+tocTab[tocTab.length] = new Array("0.1.1.1.5:8", "", "¿nueva versión?", "EARoot/EA1/EA1/EA1/EA5/EA58.htm", "56.png", "E70", "0", "", "Decision0","{FC49D639-474F-4dd9-82CF-82FFDC513E01}");
+tocTab[tocTab.length] = new Array("0.1.1.1.5:9", "", "«process» Verificación y validación de productos", "EARoot/EA1/EA1/EA1/EA5/EA59.htm", "21.png", "E69", "E72", "", "Activity0","{9E459969-193D-4465-B3FF-DB83EB822E5E}");

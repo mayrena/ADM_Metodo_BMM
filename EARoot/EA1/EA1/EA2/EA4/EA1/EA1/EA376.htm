@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Fase A: Visión de la Arquitectura</title>
+<link href="../../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../../../../../../../js/displayToc.js" type="text/javascript"></script>
+<script>
+
+  function switchProjectProperties() {
+			if (document.getElementById("proj00").style.display == "none") {
+				document.getElementById("proj00").style.display = "revert";
+				document.getElementById("proj01").style.display = "revert";
+				document.getElementById("proj02").style.display = "revert";
+				document.getElementById("proj03").style.display = "revert";
+				document.getElementById("proj04").style.display = "revert";
+				document.getElementById("proj05").style.display = "revert";
+			} else {
+				document.getElementById("proj00").style.display = "none";
+				document.getElementById("proj01").style.display = "none";
+				document.getElementById("proj02").style.display = "none";
+				document.getElementById("proj03").style.display = "none";
+				document.getElementById("proj04").style.display = "none";
+				document.getElementById("proj05").style.display = "none";
+			}
+}
+
+		function switchAdvancedProperties(){
+
+			if (document.getElementById("adv00").style.display == "none") {;
+				document.getElementById("adv00").style.display = "revert";
+				document.getElementById("adv01").style.display = "revert";
+			} else {
+				document.getElementById("adv00").style.display = "none";
+				document.getElementById("adv01").style.display = "none";
+			}
+		}
+		function initPage()
+        {			
+			var divs = document.getElementsByClassName("ObjectDetailsNotes");
+			for (var j = 0; j < divs.length; j++) {
+				var tmpStr = divs[j].innerHTML;
+				tmpStr = tmpStr.replace(/&gt;/g, ">");
+				tmpStr = tmpStr.replace(/&lt;/g, "<");
+
+				tmpStr = tmpStr.replace(/#gt;/g, "&gt;");
+				tmpStr = tmpStr.replace(/#lt;/g, "&lt;");
+
+				divs[j].innerHTML = tmpStr;
+			}
+
+            if (document.getElementById('TableGroup') != null)
+            {
+                toggleItem(document.getElementById('TableGroup').getElementsByTagName('li')[0].id.replace("Title", ""));
+            }
+
+        }
+</script>
+<style>
+
+</style>
+</head>
+<body onload="initPage();">
+<div class="section group" >
+
+		<div class="col span_2_of_2 header_frame">
+			<h1> Fase A: Visión de la Arquitectura </h1>
+			<!-- <img class="header_image" src="../../../../../../../images/ea-banner.png" align="right" alt="Header Image" />-->
+			<img class="header_image" src="../../../../../../../images/ea-banner.png" align="right" alt="Header Image" />
+		</div>
+		<div class="col span_2_of_2 breadcrumb_frame">
+			<p><a href="../../../../../../../index.htm">Adaptacion BMM</a> / <a href="../../../../../EA1.htm">BMM</a> / <a href="../../../../EA3.htm">Implementación método BMM</a> / <a href="../../../EA73.htm">Modelado de elementos del negocio</a> / <a href="../../EA365.htm">Modelado de Procesos del Negocio</a> / <a href="../EA369.htm">Diagrama de Actividades</a> / <a href="EA378.htm">Fase A: Visión de la Arquitectura</a> / <a href="EA376.htm">Fase A: Visión de la Arquitectura</a></p>
+		</div>
+			
+		<table class="contentmaintable">
+			<!-- <tfoot>
+				<tr>
+					<td>foot1</td>
+					<td>foot2</td>
+				</tr>
+			</tfoot> -->
+			<tbody>
+				<tr>
+					<td class="indexcell">
+						<div class="projectBrowserTitle">Project: </div>
+						<ul>
+<li><img src="../../../../../../../images/4.png" alt="Package"/> <a href="./EA1/EA448.htm">Sub-proceso "11. Desarrollar la Declaración de Trabajo de Arquitectura"</a></li>
+<li><img src="../../../../../../../images/4.png" alt="Package"/> <a href="./EA2/EA464.htm">Sub-proceso "9. Definir las propuestas de valor de la arquitectura objetivo y los KPIs"</a></li>
+<li><img src="../../../../../../../images/4.png" alt="Package"/> <a href="./EA3/EA475.htm">Sub-proceso 6."Definir el alcance"</a></li>
+<li><img src="../../../../../../../images/4.png" alt="Package"/> <a href="./EA4/EA487.htm">Sub-proceso"2. Identificar las partes interesadas y los requisitos"</a></li>
+<li><img src="../../../../../../../images/189.png" alt="Diagram"/> <a href="EA376.htm">Fase A: Visión de la Arquitectura</a></li>
+<li><img src="../../../../../../../images/25.png" alt="Object"/> <a href="EA426.htm">:Marco de arquitectura a medida</a></li>
+<li><img src="../../../../../../../images/25.png" alt="Object"/> <a href="EA425.htm">:Principios de Arquitectura</a></li>
+<li><img src="../../../../../../../images/25.png" alt="Object"/> <a href="EA424.htm">:Principios de negocio, objetivos de negocio e impulsores del negocio</a></li>
+<li><img src="../../../../../../../images/25.png" alt="Object"/> <a href="EA427.htm">:Repositorio de arquitectura</a></li>
+<li><img src="../../../../../../../images/21.png" alt="Activity"/> <a href="EA428.htm">1. Establecer el proyecto de arquitectura</a></li>
+<li><img src="../../../../../../../images/21.png" alt="Activity"/> <a href="EA429.htm">10. Identificar los riesgos de transformación empresarial y las actividades de mitigación</a></li>
+<li><img src="../../../../../../../images/21.png" alt="Activity"/> <a href="EA430.htm">11. Desarrollar la Declaración de Trabajo de Arquitectura; Aprobación segura</a></li>
+<li><img src="../../../../../../../images/21.png" alt="Activity"/> <a href="EA431.htm">2. Identificar a las partes interesadas, las preocupaciones y los requisitos comerciales</a></li>
+<li><img src="../../../../../../../images/21.png" alt="Activity"/> <a href="EA432.htm">3. Confirmar y elaborar objetivos de negocios, impulsores del negocio y restricciones</a></li>
+<li><img src="../../../../../../../images/21.png" alt="Activity"/> <a href="EA433.htm">4. Evaluar capacidades</a></li>
+<li><img src="../../../../../../../images/21.png" alt="Activity"/> <a href="EA434.htm">5. Evaluar la preparación para la transformación del negocio</a></li>
+<li><img src="../../../../../../../images/21.png" alt="Activity"/> <a href="EA435.htm">6. Definir el alcance</a></li>
+<li><img src="../../../../../../../images/21.png" alt="Activity"/> <a href="EA436.htm">7. Confirmar y elaborar principios de arquitectura, incluidos los principios de negocios</a></li>
+<li><img src="../../../../../../../images/21.png" alt="Activity"/> <a href="EA437.htm">8. Desarrollar la visión de la arquitectura</a></li>
+<li><img src="../../../../../../../images/21.png" alt="Activity"/> <a href="EA438.htm">9. Definir las propuestas de valor y los Indicadores claves de rendimiento (KPI) de la arquitectura objetivo </a></li>
+<li><img src="../../../../../../../images/24.png" alt="Event"/> <a href="EA439.htm">fin</a></li>
+<li><img src="../../../../../../../images/24.png" alt="Event"/> <a href="EA440.htm">inicio</a></li>
+<li><img src="../../../../../../../images/82.png" alt="Artifact"/> <a href="EA379.htm">:Declaración de trabajo de arquitectura</a></li>
+<li><img src="../../../../../../../images/82.png" alt="Artifact"/> <a href="EA380.htm">:Declaración de trabajo de arquitectura</a></li>
+<li><img src="../../../../../../../images/82.png" alt="Artifact"/> <a href="EA383.htm">:Declaración de trabajo de arquitectura</a></li>
+<li><img src="../../../../../../../images/82.png" alt="Artifact"/> <a href="EA385.htm">:Declaración de trabajo de arquitectura</a></li>
+<li><img src="../../../../../../../images/82.png" alt="Artifact"/> <a href="EA386.htm">:Declaración de trabajo de arquitectura</a></li>
+<li><img src="../../../../../../../images/82.png" alt="Artifact"/> <a href="EA387.htm">:Declaración de trabajo de arquitectura</a></li>
+<li><img src="../../../../../../../images/82.png" alt="Artifact"/> <a href="EA388.htm">:Declaración de trabajo de arquitectura</a></li>
+<li><img src="../../../../../../../images/82.png" alt="Artifact"/> <a href="EA389.htm">:Declaración de trabajo de arquitectura</a></li>
+<li><img src="../../../../../../../images/82.png" alt="Artifact"/> <a href="EA384.htm">:Matriz de mapa de partes interesadas</a></li>
+<li><img src="../../../../../../../images/82.png" alt="Artifact"/> <a href="EA381.htm">:Proyecto de Documento de definición de arquitectura</a></li>
+<li><img src="../../../../../../../images/82.png" alt="Artifact"/> <a href="EA382.htm">:Proyecto de Documento de definición de arquitectura</a></li>
+<li><img src="../../../../../../../images/82.png" alt="Artifact"/> <a href="EA390.htm">:Proyecto de Documento de definición de arquitectura</a></li>
+<li><img src="../../../../../../../images/82.png" alt="Artifact"/> <a href="EA391.htm">Activos arquitectónicos</a></li>
+<li><img src="../../../../../../../images/82.png" alt="Artifact"/> <a href="EA392.htm">Alcance de la arquitectura</a></li>
+<li><img src="../../../../../../../images/82.png" alt="Artifact"/> <a href="EA393.htm">Capacidad de Arquitectura</a></li>
+<li><img src="../../../../../../../images/82.png" alt="Artifact"/> <a href="EA394.htm">Declaración de trabajo de arquitectura</a></li>
+<li><img src="../../../../../../../images/82.png" alt="Artifact"/> <a href="EA395.htm">Plan de Comunicaciones</a></li>
+<li><img src="../../../../../../../images/82.png" alt="Artifact"/> <a href="EA420.htm">Proyecto de Documento de definición de arquitectura</a></li>
+<li><img src="../../../../../../../images/82.png" alt="Artifact"/> <a href="EA421.htm">Versiones iniciales de la arquitectura</a></li>
+<li><img src="../../../../../../../images/82.png" alt="Artifact"/> <a href="EA422.htm">Visión de la Arquitectura</a></li>
+<li><img src="../../../../../../../images/82.png" alt="Artifact"/> <a href="EA423.htm">Visión de la Arquitectura</a></li>
+</ul>
+
+					</td>
+					<td class="contentcell"><div class="PageBody">
+	<div class=diagram_image> 
+<img src="EA377.png" usemap="#EA377" border="0" />
+
+<MAP NAME="EA377">
+<area shape="rect" coords="201,536,301,599" href="EA390.htm" target="_self">
+<area shape="rect" coords="201,467,301,522" href="EA389.htm" target="_self">
+<area shape="rect" coords="373,773,473,824" href="EA388.htm" target="_self">
+<area shape="rect" coords="393,467,473,507" href="EA423.htm" target="_self">
+<area shape="rect" coords="367,522,453,573" href="EA387.htm" target="_self">
+<area shape="rect" coords="610,774,710,824" href="EA386.htm" target="_self">
+<area shape="rect" coords="666,548,755,599" href="EA385.htm" target="_self">
+<area shape="rect" coords="747,774,831,824" href="EA421.htm" target="_self">
+<area shape="rect" coords="903,527,1003,587" href="EA384.htm" target="_self">
+<area shape="rect" coords="1116,436,1201,486" href="EA391.htm" target="_self">
+<area shape="rect" coords="1099,367,1183,408" href="EA392.htm" target="_self">
+<area shape="rect" coords="781,420,881,475" href="EA383.htm" target="_self">
+<area shape="rect" coords="903,430,1042,481" href="EA382.htm" target="_self">
+<area shape="rect" coords="957,330,1053,393" href="EA381.htm" target="_self">
+<area shape="rect" coords="948,263,1034,314" href="EA380.htm" target="_self">
+<area shape="rect" coords="536,227,622,282" href="EA379.htm" target="_self">
+<area shape="rect" coords="578,310,668,346" href="EA393.htm" target="_self">
+<area shape="rect" coords="714,19,784,79" href="../../../EA3/EA253.htm" target="_self">
+<area shape="rect" coords="303,284,430,323" href="EA394.htm" target="_self">
+<area shape="rect" coords="279,335,360,372" href="EA422.htm" target="_self">
+<area shape="rect" coords="154,345,240,384" href="EA395.htm" target="_self">
+<area shape="rect" coords="11,321,107,384" href="EA420.htm" target="_self">
+<area shape="rect" coords="320,232,443,277" href="../../../EA3/EA290.htm" target="_self">
+<area shape="rect" coords="772,539,851,586" href="../../../EA3/EA289.htm" target="_self">
+<area shape="rect" coords="713,229,788,289" href="../../../EA3/EA292.htm" target="_self">
+<area shape="rect" coords="148,247,225,320" href="../../../EA3/EA308.htm" target="_self">
+<area shape="rect" coords="920,774,1028,825" href="../../../EA3/EA283.htm" target="_self">
+<area shape="rect" coords="1124,262,1193,317" href="EA427.htm" target="_self">
+<area shape="rect" coords="182,775,255,835" href="../../../EA3/EA324.htm" target="_self">
+<area shape="rect" coords="58,775,175,835" href="../../../EA3/EA329.htm" target="_self">
+<area shape="rect" coords="845,774,914,824" href="../../../EA3/EA335.htm" target="_self">
+<area shape="rect" coords="44,251,104,303" href="EA426.htm" target="_self">
+<area shape="rect" coords="838,271,903,334" href="../../../EA3/EA270.htm" target="_self">
+<area shape="rect" coords="1036,774,1103,825" href="EA425.htm" target="_self">
+<area shape="rect" coords="451,249,527,340" href="EA424.htm" target="_self">
+<area shape="rect" coords="263,775,333,835" href="../../../EA3/EA285.htm" target="_self">
+<area shape="rect" coords="501,586,594,622" href="../../../EA3/EA298.htm" target="_self">
+<area shape="rect" coords="1123,18,1181,80" href="../../../EA3/EA323.htm" target="_self">
+<area shape="rect" coords="1051,19,1115,80" href="../../../EA3/EA275.htm" target="_self">
+<area shape="rect" coords="870,18,995,79" href="../../../EA3/EA293.htm" target="_self">
+<area shape="rect" coords="543,20,643,81" href="../../../EA3/EA278.htm" target="_self">
+<area shape="rect" coords="790,18,863,79" href="../../../EA3/EA325.htm" target="_self">
+<area shape="rect" coords="649,19,708,79" href="../../../EA3/EA277.htm" target="_self">
+<area shape="rect" coords="329,20,387,80" href="../../../EA3/EA297.htm" target="_self">
+<area shape="rect" coords="222,19,322,80" href="../../../EA3/EA310.htm" target="_self">
+<area shape="rect" coords="10,20,70,80" href="../../../EA3/EA334.htm" target="_self">
+<area shape="rect" coords="153,20,216,80" href="../../../EA3/EA332.htm" target="_self">
+<area shape="rect" coords="1038,546,1101,606" href="../../../EA3/EA327.htm" target="_self">
+<area shape="rect" coords="80,20,147,80" href="../../../EA3/EA305.htm" target="_self">
+<area shape="rect" coords="417,20,537,80" href="../../../EA3/EA328.htm" target="_self">
+<area shape="rect" coords="451,358,599,420" href="../../../EA3/EA333.htm" target="_self">
+<area shape="rect" coords="81,673,111,703" href="EA439.htm" target="_self">
+<area shape="rect" coords="14,157,44,187" href="EA440.htm" target="_self">
+<area shape="rect" coords="158,642,267,736" href="./EA1/EA446.htm" target="_self">
+<area shape="rect" coords="376,641,503,736" href="EA429.htm" target="_self">
+<area shape="rect" coords="621,642,742,736" href="./EA2/EA462.htm" target="_self">
+<area shape="rect" coords="835,642,918,736" href="EA437.htm" target="_self">
+<area shape="rect" coords="1018,642,1121,736" href="EA436.htm" target="_self">
+<area shape="rect" coords="1057,122,1159,215" href="./EA3/EA473.htm" target="_self">
+<area shape="rect" coords="888,122,979,215" href="EA434.htm" target="_self">
+<area shape="rect" coords="632,126,731,219" href="EA433.htm" target="_self">
+<area shape="rect" coords="424,126,531,219" href="EA432.htm" target="_self">
+<area shape="rect" coords="211,128,335,219" href="./EA4/EA485.htm" target="_self">
+<area shape="rect" coords="73,131,160,216" href="EA428.htm" target="_self">
+</MAP>
+ </div>
+	<div class="ObjectTitle">Fase A: Visión de la Arquitectura : Business Process diagram</div>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">05/10/2022 0:00:00</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">11/11/2022 10:02:42</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><button onclick="switchProjectProperties()"><img src="../../../../../../../images/plus03.gif" align="absmiddle" id="proj" /></button>Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Wanda Mayrena</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><button onclick="switchAdvancedProperties()"><img src="../../../../../../../images/plus03.gif" align="absmiddle" id="adv" /></button>Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{3170176E-357A-4431-90A6-8143C85B023B}</td>
+		</tr>
+	</table>
+	
+</div>
+
+ </td>
+				</tr>
+			</tbody>
+		</table>
+		
+</div>
+</body>
+</html>
+

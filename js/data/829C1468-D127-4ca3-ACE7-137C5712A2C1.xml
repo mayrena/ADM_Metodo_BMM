@@ -1,0 +1,6 @@
+tocTab[tocTab.length] = new Array("0.1.1.1.6:1", "", "Organización de los modelos", "EARoot/EA1/EA1/EA1/EA6/EA60.htm", "176.png", "5", "0", "", "Package diagram0","{036B4CCE-ABC3-4b9f-8E10-D5D09A2EEDEA}");
+tocTab[tocTab.length] = new Array("0.1.1.1.6.1", "", "Modelado de Actores (roles)", "EARoot/EA1/EA1/EA1/EA6/EA1/EA68.htm", "4.png", "", "", "{F449E2C9-4B69-4f10-A934-0481BFAF60EF}", "Package");
+tocTab[tocTab.length] = new Array("0.1.1.1.6.2", "", "Modelado de Eventos (diagrama de flujo entre procesos)", "EARoot/EA1/EA1/EA1/EA6/EA2/EA69.htm", "4.png", "", "", "{F7ADE6C9-0E46-41d2-B081-91C603D387F8}", "Package");
+tocTab[tocTab.length] = new Array("0.1.1.1.6.3", "", "Modelado de Negocios ADM-TOGAF 9.2", "EARoot/EA1/EA1/EA1/EA6/EA3/EA70.htm", "4.png", "", "", "{295845EF-B114-4468-98BE-5A01F7BD0B82}", "Package");
+tocTab[tocTab.length] = new Array("0.1.1.1.6.4", "", "Modelado de Objetos del Negocio", "EARoot/EA1/EA1/EA1/EA6/EA4/EA71.htm", "4.png", "", "", "{48B3F18F-09CF-459e-B9BC-BE40CDE160BD}", "Package");
+tocTab[tocTab.length] = new Array("0.1.1.1.6.5", "", "Modelado de Procesos del Negocio", "EARoot/EA1/EA1/EA1/EA6/EA5/EA72.htm", "4.png", "", "", "{3C236DA7-3C10-4d5d-B94A-74E456B664EF}", "Package");

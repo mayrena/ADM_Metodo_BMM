@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Modelado de Objetos del Negocio</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../../../../../js/displayToc.js" type="text/javascript"></script>
+<script>
+
+  function switchProjectProperties() {
+			if (document.getElementById("proj00").style.display == "none") {
+				document.getElementById("proj00").style.display = "revert";
+				document.getElementById("proj01").style.display = "revert";
+				document.getElementById("proj02").style.display = "revert";
+				document.getElementById("proj03").style.display = "revert";
+				document.getElementById("proj04").style.display = "revert";
+				document.getElementById("proj05").style.display = "revert";
+			} else {
+				document.getElementById("proj00").style.display = "none";
+				document.getElementById("proj01").style.display = "none";
+				document.getElementById("proj02").style.display = "none";
+				document.getElementById("proj03").style.display = "none";
+				document.getElementById("proj04").style.display = "none";
+				document.getElementById("proj05").style.display = "none";
+			}
+}
+
+		function switchAdvancedProperties(){
+
+			if (document.getElementById("adv00").style.display == "none") {;
+				document.getElementById("adv00").style.display = "revert";
+				document.getElementById("adv01").style.display = "revert";
+			} else {
+				document.getElementById("adv00").style.display = "none";
+				document.getElementById("adv01").style.display = "none";
+			}
+		}
+		function initPage()
+        {			
+			var divs = document.getElementsByClassName("ObjectDetailsNotes");
+			for (var j = 0; j < divs.length; j++) {
+				var tmpStr = divs[j].innerHTML;
+				tmpStr = tmpStr.replace(/&gt;/g, ">");
+				tmpStr = tmpStr.replace(/&lt;/g, "<");
+
+				tmpStr = tmpStr.replace(/#gt;/g, "&gt;");
+				tmpStr = tmpStr.replace(/#lt;/g, "&lt;");
+
+				divs[j].innerHTML = tmpStr;
+			}
+
+            if (document.getElementById('TableGroup') != null)
+            {
+                toggleItem(document.getElementById('TableGroup').getElementsByTagName('li')[0].id.replace("Title", ""));
+            }
+
+        }
+</script>
+<style>
+
+</style>
+</head>
+<body onload="initPage();">
+<div class="section group" >
+
+		<div class="col span_2_of_2 header_frame">
+			<h1> Modelado de Objetos del Negocio </h1>
+			<!-- <img class="header_image" src="../../../../../images/ea-banner.png" align="right" alt="Header Image" />-->
+			<img class="header_image" src="../../../../../images/ea-banner.png" align="right" alt="Header Image" />
+		</div>
+		<div class="col span_2_of_2 breadcrumb_frame">
+			<p><a href="../../../../../index.htm">Adaptacion BMM</a> / <a href="../../../EA1.htm">BMM</a> / <a href="../../EA3.htm">Implementación método BMM</a> / <a href="../EA73.htm">Modelado de elementos del negocio</a> / <a href="EA173.htm">Modelado de Objetos del Negocio</a></p>
+		</div>
+			
+		<table class="contentmaintable">
+			<!-- <tfoot>
+				<tr>
+					<td>foot1</td>
+					<td>foot2</td>
+				</tr>
+			</tfoot> -->
+			<tbody>
+				<tr>
+					<td class="indexcell">
+						<div class="projectBrowserTitle">Project: </div>
+						<ul>
+<li><img src="../../../../../images/4.png" alt="Package"/> <a href="./EA5/EA360.htm">Fase A: Visión de la arquitectura</a></li>
+<li><img src="../../../../../images/4.png" alt="Package"/> <a href="./EA1/EA338.htm">Fase B: Arquitectura del negocio</a></li>
+<li><img src="../../../../../images/4.png" alt="Package"/> <a href="./EA2/EA340.htm">Fase C: Arquitectura de Sistemas de Información</a></li>
+<li><img src="../../../../../images/4.png" alt="Package"/> <a href="./EA3/EA353.htm">Fase D: Arquitectura tecnológica</a></li>
+<li><img src="../../../../../images/4.png" alt="Package"/> <a href="./EA4/EA357.htm">Fase Gestión de Requisitos</a></li>
+<li><img src="../../../../../images/4.png" alt="Package"/> <a href="./EA6/EA364.htm">Fase Preliminar</a></li>
+<li><img src="../../../../../images/175.png" alt="Diagram"/> <a href="EA171.htm">Modelado de Objetos del Negocio</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA270.htm"> Evaluación de la capacidad</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA271.htm">Actores</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA272.htm">Acuerdos de asociación y contrato</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA273.htm">Adaptación del ADM  </a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA274.htm">ADM</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA275.htm">Alcance de la arquitectura</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA276.htm">Análisis de brechas</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA277.htm">Aplicación de iteración al ADM</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA278.htm">Aplicación del ADM en todo el panorama arquitectónico</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA279.htm">Artefactos</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA280.htm">Bloques de construcción de arquitectura -ABBs-</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA251.htm">Bloques de construcción de soluciones -SSBs-
+</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA281.htm">Capacidad de arquitectura</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA283.htm">Catálogos, Matrices, Diagramas y/o Técnicas</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA284.htm">Continuum empresarial</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA285.htm">Declaración de trabajo de arquitectura</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA252.htm">Desarrollo de requisitos</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA253.htm">Enfoque Fase A: Visión de la arquitectura</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA254.htm">Enfoque Fase B: Arquitectura del Negocio</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA255.htm">Enfoque Fase C: Arquitecturas de SI- Arquitectura de  Datos</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA256.htm">Enfoque Fase C: Arquitecturas de SI- Arquitectura de Aplicaciones</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA257.htm">Enfoque Fase D: Arquitectura tecnológica</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA286.htm">Entradas arquitectónicas</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA287.htm">Entradas no arquitectónicas</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA288.htm">Entregables</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA290.htm">Especificación de requisitos de arquitectura</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA291.htm">Estrategias de la junta y planes de negocios de la junta</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA258.htm">Evaluación de impacto de los requisitos 
+</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA293.htm">Evaluación de la preparación para la transformación del negocio</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA259.htm">Evaluar capacidades</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA297.htm">Gestión de las partes interesadas</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA298.htm">Gestión de riesgos</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA299.htm">Gobernanza de la arquitectura</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA300.htm">Gobernanza y marcos legales</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA301.htm">Herramientas para el desarrollo de la arquitectura</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA302.htm">Hoja de ruta de arquitectura</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA303.htm">Información de producto sobre productos candidatos</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA304.htm">La Biblioteca TOGAF</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA305.htm">Marco de arquitectura a medida</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA306.htm">Marco de gobernanza de la arquitectura</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA307.htm">Materiales de referencia externos a la empresa</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA309.htm">Metamodelo de contenido</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA310.htm">Modelo organizativo para la arquitectura empresarial</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA311.htm">Modelos de madurez de la arquitectura</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA312.htm">Objetos del negocio de la Fase C: Arquitecturas de Sistemas de Información - Arquitectura de Aplicaciones</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA313.htm">Objetos del negocio de la Fase C: Arquitecturas de Sistemas de Información - Arquitectura de Datos</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA314.htm">Objetos del negocio de la Fase D: Arquitectura tecnológica</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA315.htm">Objetos del negocio de la Fase de Gestión de requisitos</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA316.htm">Objetos del Negocio del ADM</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA317.htm">Objetos del negocios de la Fase A: Visión de la Arquitectura</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA318.htm">Objetos del negocios de la Fase B: Arquitectura de Negocios</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA319.htm">Objetos del negocios de la Fase C: Arquitecturas de Sistemas de Información</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA320.htm">Objetos del negocios de la Fase Premilinar</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA321.htm">Otros marcos de arquitectura</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA322.htm">Otros Recursos</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA323.htm">Partición de arquitectura</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA324.htm">Plan de Comunicaciones</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA325.htm">Plan de Implementación y Migración</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA326.htm">Principales marcos que operan en el negocio</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA327.htm">Principios de Arquitectura</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA328.htm">Principios de negocio, objetivos de negocio e impulsores del negocio</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA329.htm">Proyecto de Documento de definición de arquitectura</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA331.htm">Reglas</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA332.htm">Repositorio de arquitectura</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA334.htm">Solicitud de trabajo de arquitectura</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA335.htm">Visión de la Arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA181.htm">: Evaluación de la capacidad</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA194.htm">: Evaluación de la capacidad</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA210.htm">: Evaluación de la capacidad</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA229.htm">: Evaluación de la capacidad</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA206.htm">:Análisis de brechas</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA223.htm">:Análisis de brechas</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA226.htm">:Análisis de brechas</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA207.htm">:Aplicación de iteración al ADM</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA221.htm">:Aplicación de iteración al ADM</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA227.htm">:Aplicación de iteración al ADM</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA191.htm">:Bloques de construcción de arquitectura -ABBs-</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA208.htm">:Bloques de construcción de arquitectura -ABBs-</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA224.htm">:Bloques de construcción de arquitectura -ABBs-</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA236.htm">:Bloques de construcción de arquitectura -ABBs-</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA174.htm">:Catálogos, Matrices, Diagramas y/o Técnicas</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA192.htm">:Catálogos, Matrices, Diagramas y/o Técnicas</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA204.htm">:Catálogos, Matrices, Diagramas y/o Técnicas</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA220.htm">:Catálogos, Matrices, Diagramas y/o Técnicas</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA240.htm">:Catálogos, Matrices, Diagramas y/o Técnicas</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA185.htm">:Declaración de trabajo de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA198.htm">:Declaración de trabajo de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA215.htm">:Declaración de trabajo de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA234.htm">:Declaración de trabajo de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA244.htm">:Declaración de trabajo de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA247.htm">:Desarrollo de requisitos</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA248.htm">:Desarrollo de requisitos</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA250.htm">:Desarrollo de requisitos</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA249.htm">:Enfoque Fase A: Visión de la arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA189.htm">:Especificación de requisitos de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA201.htm">:Especificación de requisitos de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA218.htm">:Especificación de requisitos de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA238.htm">:Especificación de requisitos de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA246.htm">:Especificación de requisitos de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA190.htm">:Hoja de ruta de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA202.htm">:Hoja de ruta de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA219.htm">:Hoja de ruta de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA239.htm">:Hoja de ruta de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA268.htm">:Marco de arquitectura a medida</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA184.htm">:Marco de arquitectura a medida</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA197.htm">:Marco de arquitectura a medida</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA213.htm">:Marco de arquitectura a medida</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA232.htm">:Marco de arquitectura a medida</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA243.htm">:Marco de arquitectura a medida</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA205.htm">:Metamodelo de contenido</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA222.htm">:Metamodelo de contenido</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA225.htm">:Metamodelo de contenido</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA267.htm">:Modelo organizativo para la arquitectura empresarial</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA183.htm">:Modelo organizativo para la arquitectura empresarial</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA196.htm">:Modelo organizativo para la arquitectura empresarial</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA212.htm">:Modelo organizativo para la arquitectura empresarial</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA231.htm">:Modelo organizativo para la arquitectura empresarial</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA242.htm">:Modelo organizativo para la arquitectura empresarial</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA182.htm">:Plan de Comunicaciones</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA195.htm">:Plan de Comunicaciones</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA211.htm">:Plan de Comunicaciones</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA230.htm">:Plan de Comunicaciones</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA269.htm">:Principios de Arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA186.htm">:Principios de Arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA203.htm">:Principios de Arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA214.htm">:Principios de Arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA233.htm">:Principios de Arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA266.htm">:Principios de negocio, objetivos de negocio e impulsores del negocio</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA180.htm">:Principios de negocio, objetivos de negocio e impulsores del negocio</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA188.htm">:Proyecto de Documento de definición de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA200.htm">:Proyecto de Documento de definición de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA217.htm">:Proyecto de Documento de definición de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA237.htm">:Proyecto de Documento de definición de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA265.htm">:Repositorio de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA175.htm">:Repositorio de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA177.htm">:Repositorio de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA178.htm">:Repositorio de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA179.htm">:Repositorio de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA241.htm">:Repositorio de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA264.htm">:Solicitud de trabajo de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA176.htm">:Solicitud de trabajo de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA193.htm">:Solicitud de trabajo de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA209.htm">:Solicitud de trabajo de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA228.htm">:Solicitud de trabajo de arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA187.htm">:Visión de la Arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA199.htm">:Visión de la Arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA216.htm">:Visión de la Arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA235.htm">:Visión de la Arquitectura</a></li>
+<li><img src="../../../../../images/25.png" alt="Object"/> <a href="EA245.htm">:Visión de la Arquitectura</a></li>
+<li><img src="../../../../../images/82.png" alt="Artifact"/> <a href="EA282.htm">Catálogo de principios</a></li>
+<li><img src="../../../../../images/82.png" alt="Artifact"/> <a href="EA289.htm">Escenarios de negocios</a></li>
+<li><img src="../../../../../images/82.png" alt="Artifact"/> <a href="EA292.htm">Evaluación de la capacidad</a></li>
+<li><img src="../../../../../images/82.png" alt="Artifact"/> <a href="EA294.htm">Evaluación de madurez</a></li>
+<li><img src="../../../../../images/82.png" alt="Artifact"/> <a href="EA308.htm">Matriz de mapa de partes interesadas</a></li>
+<li><img src="../../../../../images/82.png" alt="Artifact"/> <a href="EA330.htm">Reformulación o referencia a los principios de negocio, objetivos de negocio e impulsores de negocio</a></li>
+<li><img src="../../../../../images/82.png" alt="Artifact"/> <a href="EA333.htm">Repositorio de Arquitectura</a></li>
+</ul>
+
+					</td>
+					<td class="contentcell"><div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Modelado de Objetos del Negocio  : Public   Package</span>
+	<table border="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">16/10/2022 11:38:17</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">16/10/2022 11:38:17</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><button onclick="switchProjectProperties()"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" /></button>Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">Wanda Mayrena</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">Proposed</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Easy</td>
+		</tr>
+		<tr id="proj05" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Difficulty:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj06" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Priority:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj05" style="display: none;">
+			<td class="ObjectDetailsTopic" >Multiplicity:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><button onclick="switchAdvancedProperties()"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" /></button>Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{21F89C7E-FA6C-4660-BC83-A8A754DA6373}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+	</table>
+	
+ </div>
+ </td>
+				</tr>
+			</tbody>
+		</table>
+		
+</div>
+</body>
+</html>
+
